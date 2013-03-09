@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">group9</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="welcome_text">Hi and welcome to our game</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="user_email">Email</string>
+    <string name="user_password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name ="user_password_confirmation">Confirm Password</string>
+    <string name="action_settings">Settings</string>
+    <string name="register_disclaimer">By clicking on Register you are agreeing to terms of service</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+</resources>
