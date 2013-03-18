@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 public class HomeActivity extends Activity {
 
-	private static final String TASKS_URL = "http://localhost:3000/api/v1/tasks.json";
+	private static final String TASKS_URL = "http://obscure-escarpment-3110.herokuapp.com/api/v1/tasks.json";
 	private SharedPreferences mPreferences;
 	
 	@Override

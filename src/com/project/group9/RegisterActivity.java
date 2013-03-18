@@ -26,7 +26,7 @@ import android.widget.Toast;
 
 public class RegisterActivity extends Activity {
 
-	private final static String REGISTER_API_ENDPOINT_URL = "http://localhost:3000/api/v1/registrations";
+	private final static String REGISTER_API_ENDPOINT_URL = "http://obscure-escarpment-3110.herokuapp.com/api/v1/registrations";
 	private SharedPreferences mPreferences;
 	private String mUserEmail;
 	private String mUserName;
