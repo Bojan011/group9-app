@@ -42,6 +42,7 @@ public class HomeActivity extends Activity {
 	        Intent intent = new Intent(HomeActivity.this, WelcomeActivity.class);
 	        startActivityForResult(intent, 0);
 	    }
+	    
 	}
 
 	private void loadTasksFromAPI(String url) {
@@ -92,6 +93,9 @@ public class HomeActivity extends Activity {
 	        case R.id.menu_refresh:
 	            loadTasksFromAPI(TASKS_URL);
 	            return true;
+	        case R.id.action_back:
+	        	Intent intent = new Intent(HomeActivity.this, WelcomeActivity.class);
+	        	startActivityForResult(intent, 0);
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }

@@ -72,6 +72,7 @@ public class LoginActivity extends Activity {
 	    protected JSONObject doInBackground(String... urls) {
 	        DefaultHttpClient client = new DefaultHttpClient();
 	        HttpPost post = new HttpPost(urls[0]);
+
 	        JSONObject holder = new JSONObject();
 	        JSONObject userObj = new JSONObject();
 	        String response = null;
