@@ -32,12 +32,36 @@
         <activity
             android:name="com.project.group9.LoginActivity"
             android:label="@string/title_activity_login"
-            android:noHistory="true">
+            android:noHistory="true" >
         </activity>
         <activity
             android:name="com.project.group9.RegisterActivity"
             android:label="@string/title_activity_register"
-             android:noHistory="true">
+            android:noHistory="true" >
+        </activity>
+        <activity
+            android:name="com.project.group9.CharacterBuild"
+            android:label="@string/title_activity_character_build" >
+        </activity>
+        <activity
+            android:name="com.project.group9.Battle"
+            android:label="@string/title_activity_battle" >
+        </activity>
+        <activity
+            android:name="com.project.group9.Quest"
+            android:label="@string/title_activity_quest" >
+        </activity>
+        <activity
+            android:name="com.project.group9.Profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name="com.project.group9.ViewGang"
+            android:label="@string/title_activity_view_gang" >
+        </activity>
+        <activity
+            android:name="com.project.group9.BattleInfo"
+            android:label="@string/title_activity_battle_info" >
         </activity>
     </application>
 
