@@ -126,6 +126,7 @@ public class LoginActivity extends Activity {
 	                // the SharedPreferences
 	                editor.putString("AuthToken", json.getJSONObject("data").getString("auth_token"));
 	                editor.commit();
+	                System.out.print(mPreferences.edit());
 
 	                // launch the HomeActivity and close this one
 	                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
