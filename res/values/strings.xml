@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">group9</string>
+    <string name="app_name">CyberPunk</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="welcome_text">Hi and welcome to our game</string>
