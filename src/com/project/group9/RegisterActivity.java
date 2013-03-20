@@ -135,7 +135,7 @@ public class RegisterActivity extends Activity {
 	                editor.commit();
 
 	                // launch the HomeActivity and close this one
-	                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+	                Intent intent = new Intent(getApplicationContext(), CharacterBuild.class);
 	                startActivity(intent);
 	                finish();
 	            }

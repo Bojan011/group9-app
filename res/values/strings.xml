@@ -14,6 +14,7 @@
     <string name="action_back">Back</string>
     <string name="register_disclaimer">By clicking on Register you are agreeing to terms of service</string>
     <string name="hello_world">Hello world!</string>
+    <string name="battle">YOU HAVE A CHALLENGER,\nPREPARE FOR BATTLE!!!</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
