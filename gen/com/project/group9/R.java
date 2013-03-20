@@ -42,8 +42,9 @@ public final class R {
         public static final int ch7=0x7f020012;
         public static final int ch8=0x7f020013;
         public static final int ch9=0x7f020014;
-        public static final int ic_launcher=0x7f020015;
-        public static final int mainscreen=0x7f020016;
+        public static final int cyberpunk=0x7f020015;
+        public static final int ic_launcher=0x7f020016;
+        public static final int mainscreen=0x7f020017;
     }
     public static final class id {
         public static final int action_back=0x7f080011;
@@ -52,6 +53,7 @@ public final class R {
         public static final int char1=0x7f080002;
         public static final int char2=0x7f080000;
         public static final int editText1=0x7f080003;
+        public static final int linearLayout1=0x7f08000d;
         public static final int loginButton=0x7f080008;
         public static final int menu_refresh=0x7f080010;
         public static final int registerButton=0x7f08000c;
@@ -62,8 +64,7 @@ public final class R {
         public static final int userName=0x7f080009;
         public static final int userPassword=0x7f080007;
         public static final int userPasswordConfirmation=0x7f08000a;
-        public static final int welcomeText=0x7f08000e;
-        public static final int welcomeTitle=0x7f08000d;
+        public static final int welcomeTitle=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;

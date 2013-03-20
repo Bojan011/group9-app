@@ -5,7 +5,7 @@
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="welcome_text">Hi and welcome to our game</string>
-    <string name="welcome_title">Welcome</string>
+    <string name="welcome_title" align="center">Welcome</string>
     <string name="user_email">Email</string>
     <string name="user_password">Password</string>
     <string name="user_name">User Name</string>
