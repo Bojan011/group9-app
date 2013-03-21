@@ -24,5 +24,8 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_view_gang">ViewGang</string>
     <string name="title_activity_battle_info">BattleInfo</string>
+    <string name="char_name">Character Name</string>
+    <string name="title_activity_character_stats_initialize">CharacterStatsInitialize</string>
+    <string name="title_activity_character_stats_add">CharacterStatsAdd</string>
 
 </resources>

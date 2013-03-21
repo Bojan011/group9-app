@@ -3,21 +3,19 @@ package com.project.group9;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-import android.widget.TextView;
 
-public class Battle extends Activity {
+public class CharacterStatsAdd extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_battle);
-		//TextView image = (TextView) this.findViewById(R.id.char1);	
-	} 
+		setContentView(R.layout.activity_character_stats_add);
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.battle, menu);
+		getMenuInflater().inflate(R.menu.character_stats_add, menu);
 		return true;
 	}
 

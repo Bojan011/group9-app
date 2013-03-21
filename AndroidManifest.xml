@@ -63,6 +63,14 @@
             android:name="com.project.group9.BattleInfo"
             android:label="@string/title_activity_battle_info" >
         </activity>
+        <activity
+            android:name="com.project.group9.CharacterStatsInitialize"
+            android:label="@string/title_activity_character_stats_initialize" >
+        </activity>
+        <activity
+            android:name="com.project.group9.CharacterStatsAdd"
+            android:label="@string/title_activity_character_stats_add" >
+        </activity>
     </application>
 
 </manifest>
