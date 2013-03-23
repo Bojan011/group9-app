@@ -25,7 +25,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
-	private final static String LOGIN_API_ENDPOINT_URL = "http://obscure-escarpment-3110.herokuapp.com/api/v1/sessions.json";
+	private final static String LOGIN_API_ENDPOINT_URL = "http://secure-journey-9929.herokuapp.com/api/v1/sessions.json";
 	private SharedPreferences mPreferences;
 	private String mUserEmail;
 	private String mUserPassword;

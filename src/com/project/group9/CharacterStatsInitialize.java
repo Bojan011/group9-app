@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+/*
+ * Called when user first creates character.
+ */
 public class CharacterStatsInitialize extends Activity {
 
 	@Override

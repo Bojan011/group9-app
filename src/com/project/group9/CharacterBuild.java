@@ -26,6 +26,15 @@ public class CharacterBuild extends Activity {
 		        		startActivityForResult(photoPickerIntent, 1);
 		        	}
 		        });
+		
+		findViewById(R.id.button1).setOnClickListener(
+		        new View.OnClickListener() {
+		        	@Override
+		            public void onClick(View v) {
+		        		Intent intent = new Intent(getApplicationContext(), CharacterStatsInitialize.class);
+		                startActivity(intent);
+		        	}
+		        });
 	}
 	
 	protected void onActivityResult(int requestCode, int resultCode,
