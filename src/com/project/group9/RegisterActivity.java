@@ -26,7 +26,7 @@ import android.widget.Toast;
 
 public class RegisterActivity extends Activity {
 
-	private final static String REGISTER_API_ENDPOINT_URL = "http://secure-journey-9929.herokuapp.com/api/v1/registrations";
+	private final static String REGISTER_API_ENDPOINT_URL = "http://cryptic-hollows-1268.herokuapp.com/api/v1/registrations";
 	private SharedPreferences mPreferences;
 	private String mUserEmail;
 	private String mUserName;

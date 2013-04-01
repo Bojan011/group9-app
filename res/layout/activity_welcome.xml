@@ -2,9 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    
     android:background="@drawable/cyberpunk"
     android:orientation="vertical"
-    android:padding="15dp" >
+    android:padding="15dp"
+    >
 
     <TextView
         android:id="@+id/welcomeTitle"
@@ -30,19 +32,21 @@
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:layout_weight="1"
             android:text="@string/login"
+            android:background="@drawable/whiteblack"
             android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="47dp"
             android:layout_alignLeft="@+id/linearLayout1"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
+            android:background="@drawable/whiteblack"
             android:text="@string/register"
             android:textColor="@android:color/white" />
     </LinearLayout>
