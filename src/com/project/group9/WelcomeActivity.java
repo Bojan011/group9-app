@@ -1,17 +1,57 @@
 package com.project.group9;
 
 import android.os.Bundle;
+import android.os.IBinder;
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.view.Menu;
 import android.view.View;
 
 public class WelcomeActivity extends Activity {
 
+    private boolean mIsBound = false;
+    private MusicService mServ;
+    private ServiceConnection Scon =new ServiceConnection(){
+
+    	public void onServiceConnected(ComponentName name, IBinder
+         binder) {
+    		mServ = ((MusicService.ServiceBinder)binder).getService();
+    	}
+
+    	public void onServiceDisconnected(ComponentName name) {
+    		mServ = null;
+    	}
+    };
+
+    	void doBindService(){
+     		bindService(new Intent(this,MusicService.class),
+    				Scon,Context.BIND_AUTO_CREATE);
+    		mIsBound = true;
+    	}
+
+    	void doUnbindService()
+    	{
+    		if(mIsBound)
+    		{
+    			unbindService(Scon);
+          		mIsBound = false;
+    		}
+    	}
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_welcome);
+	    this.doBindService();
+	    MusicService mServ = new MusicService();
+
+	    Intent music = new Intent();
+	    music.setClass(this,MusicService.class);
+	    startService(music);
+
+	    //mServ.onDestroy();
 
 	    findViewById(R.id.registerButton).setOnClickListener(
 	        new View.OnClickListener() {
@@ -34,6 +74,7 @@ public class WelcomeActivity extends Activity {
 	                startActivityForResult(intent, 0);
 	            }
 	        });
+
 	}
 
 	@Override
