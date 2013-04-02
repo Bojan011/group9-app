@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">CyberPunk</string>
+    <string name="gender">Gender (M or F)</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
     <string name="welcome_text">Hi and welcome to our game</string>

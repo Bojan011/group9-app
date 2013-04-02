@@ -18,6 +18,7 @@
             android:background="@drawable/edittext_bg"
             android:layout_weight="1"
             android:ems="10"
+            android:textColorHint="@android:color/white"
             android:hint="@string/user_email"
             android:inputType="textEmailAddress" >
             <requestFocus android:layout_width="wrap_content" />
@@ -32,17 +33,19 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/user_name"
+            android:textColorHint="@android:color/white"
             android:inputType="text" />
 
         <EditText
             android:id="@+id/userPassword"
             android:textColor="@android:color/white"
             android:layout_width="match_parent"
-                        android:layout_height="45dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_bg"
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/user_password"
+            android:textColorHint="@android:color/white"
             android:inputType="textPassword" />
 
         <EditText
@@ -54,6 +57,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/user_password_confirmation"
+            android:textColorHint="@android:color/white"
             android:inputType="textPassword" />
 
         <TextView

@@ -31,10 +31,10 @@
         android:textStyle="bold"
         android:gravity="center"
         android:ems="10"
-        android:text="Gender (M or F)"
         android:paddingLeft="7dp"
         android:textColor="@android:color/white"
-        android:hint="Gender (M or F)" />
+        android:hint="@string/gender"
+        android:textColorHint="@android:color/white" />
     <EditText
         android:id="@+id/editText1"
         android:textColor="#fff"
@@ -42,15 +42,14 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="Enter your name"
         android:background="@drawable/textboxbac"
         android:layout_alignLeft="@+id/editText2"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="36dp"
         android:paddingLeft="7dp"        
         android:ems="10"
-        
-        android:hint="@string/char_name" />
+        android:hint="@string/char_name" 
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/textView1"

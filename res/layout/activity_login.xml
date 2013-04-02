@@ -20,6 +20,7 @@
             android:ems="10"
             android:background="@drawable/edittext_bg"
             android:hint="@string/user_email"
+            android:textColorHint="@android:color/white"
             android:inputType="textEmailAddress" >
 
             <requestFocus />
@@ -34,6 +35,7 @@
             android:background="@drawable/edittext_bg"
             android:textColor="@android:color/white"
             android:hint="@string/user_password"
+            android:textColorHint="@android:color/white"
             android:inputType="textPassword" />
 
         <Button
@@ -41,13 +43,13 @@
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
-            android:textColor="#fff"
-            android:textStyle="bold"
             android:layout_weight="1"
-            android:onClick="login"
             android:background="@drawable/whiteblack"
-            
-            android:text="@string/login" />
+            android:onClick="login"
+            android:text="@string/login"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
 </ScrollView>

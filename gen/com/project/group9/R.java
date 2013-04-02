@@ -116,33 +116,34 @@ public final class R {
         public static final int theme=0x7f040000;
     }
     public static final class string {
-        public static final int action_back=0x7f06000a;
-        public static final int action_settings=0x7f060009;
+        public static final int action_back=0x7f06000b;
+        public static final int action_settings=0x7f06000a;
         public static final int app_name=0x7f060000;
-        public static final int battle=0x7f06000e;
-        public static final int char_build=0x7f06000d;
-        public static final int char_name=0x7f060018;
-        public static final int hello_world=0x7f06000c;
-        public static final int login=0x7f060002;
-        public static final int register=0x7f060001;
-        public static final int register_disclaimer=0x7f06000b;
-        public static final int title_activity_battle=0x7f060013;
-        public static final int title_activity_battle_info=0x7f060017;
-        public static final int title_activity_character_build=0x7f060012;
-        public static final int title_activity_character_stats_add=0x7f06001a;
-        public static final int title_activity_character_stats_initialize=0x7f060019;
-        public static final int title_activity_login=0x7f060010;
-        public static final int title_activity_profile=0x7f060015;
-        public static final int title_activity_quest=0x7f060014;
-        public static final int title_activity_register=0x7f060011;
-        public static final int title_activity_view_gang=0x7f060016;
-        public static final int title_activity_welcome=0x7f06000f;
-        public static final int user_email=0x7f060005;
-        public static final int user_name=0x7f060007;
-        public static final int user_password=0x7f060006;
-        public static final int user_password_confirmation=0x7f060008;
-        public static final int welcome_text=0x7f060003;
-        public static final int welcome_title=0x7f060004;
+        public static final int battle=0x7f06000f;
+        public static final int char_build=0x7f06000e;
+        public static final int char_name=0x7f060019;
+        public static final int gender=0x7f060001;
+        public static final int hello_world=0x7f06000d;
+        public static final int login=0x7f060003;
+        public static final int register=0x7f060002;
+        public static final int register_disclaimer=0x7f06000c;
+        public static final int title_activity_battle=0x7f060014;
+        public static final int title_activity_battle_info=0x7f060018;
+        public static final int title_activity_character_build=0x7f060013;
+        public static final int title_activity_character_stats_add=0x7f06001b;
+        public static final int title_activity_character_stats_initialize=0x7f06001a;
+        public static final int title_activity_login=0x7f060011;
+        public static final int title_activity_profile=0x7f060016;
+        public static final int title_activity_quest=0x7f060015;
+        public static final int title_activity_register=0x7f060012;
+        public static final int title_activity_view_gang=0x7f060017;
+        public static final int title_activity_welcome=0x7f060010;
+        public static final int user_email=0x7f060006;
+        public static final int user_name=0x7f060008;
+        public static final int user_password=0x7f060007;
+        public static final int user_password_confirmation=0x7f060009;
+        public static final int welcome_text=0x7f060004;
+        public static final int welcome_title=0x7f060005;
     }
     public static final class style {
         /** 
