@@ -45,7 +45,7 @@ public class WelcomeActivity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_welcome);
 	    this.doBindService();
-	    MusicService mServ = new MusicService();
+	    mServ = new MusicService();
 
 	    Intent music = new Intent();
 	    music.setClass(this,MusicService.class);
@@ -58,6 +58,7 @@ public class WelcomeActivity extends Activity {
 	            @Override
 	            public void onClick(View v) {
 	                // No account, load new account view
+	            	mServ.stopMusic();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    RegisterActivity.class);
 	                startActivityForResult(intent, 0);
@@ -69,6 +70,8 @@ public class WelcomeActivity extends Activity {
 	            @Override
 	            public void onClick(View v) {
 	                // Existing Account, load login view
+	            	///STOP MUSIC when we click login
+	            	mServ.stopMusic();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    LoginActivity.class);
 	                startActivityForResult(intent, 0);
@@ -83,6 +86,8 @@ public class WelcomeActivity extends Activity {
 	    startMain.addCategory(Intent.CATEGORY_HOME);
 	    startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 	    startActivity(startMain);
+	    //stopService(music);
+	    mServ.onDestroy();
 	    finish();
 	}
 

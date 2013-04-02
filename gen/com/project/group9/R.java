@@ -71,7 +71,7 @@ public final class R {
         public static final int char2=0x7f090000;
         public static final int editText1=0x7f090002;
         public static final int editText2=0x7f090006;
-        public static final int linearLayout1=0x7f090011;
+        public static final int linearLayout1=0x7f090010;
         public static final int loginButton=0x7f09000b;
         public static final int menu_refresh=0x7f090013;
         public static final int registerButton=0x7f09000f;
@@ -82,7 +82,7 @@ public final class R {
         public static final int userName=0x7f09000c;
         public static final int userPassword=0x7f09000a;
         public static final int userPasswordConfirmation=0x7f09000d;
-        public static final int welcomeTitle=0x7f090010;
+        public static final int welcomeTitle=0x7f090011;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;
