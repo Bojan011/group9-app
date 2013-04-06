@@ -46,6 +46,9 @@ public class HomeActivity extends Activity {
         // View Gangs button 
         Button button_view_gangs = (Button) findViewById(R.id.view_gangs_button); 
   
+        // Battle button
+        Button button_battle = (Button) findViewById(R.id.battle_button);
+        
         // Logout button 
         Button button_logout = (Button) findViewById(R.id.log_out_button); 
   
@@ -104,6 +107,16 @@ public class HomeActivity extends Activity {
             public void onClick(View view) { 
                 // Launching SideMissions Screen 
                 Intent i = new Intent(getApplicationContext(), ViewGang.class); 
+                startActivity(i); 
+            } 
+        }); 
+        
+        button_battle.setOnClickListener(new View.OnClickListener() { 
+        	  
+            @Override
+            public void onClick(View view) { 
+                // Launching battle Screen 
+                Intent i = new Intent(getApplicationContext(), Battle.class); 
                 startActivity(i); 
             } 
         }); 
