@@ -114,8 +114,11 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching Login Activity Screen 
-                Intent i = new Intent(getApplicationContext(), LoginActivity.class); 
-                startActivity(i); 
+            	Intent intent = new Intent(Intent.ACTION_MAIN);
+            	intent.addCategory(Intent.CATEGORY_HOME);
+            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            	startActivity(intent);
+            	finish();
             } 
         }); 
     } 

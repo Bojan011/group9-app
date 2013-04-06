@@ -50,6 +50,7 @@ public class WelcomeActivity extends Activity {
 	    Intent music = new Intent();
 	    music.setClass(this,MusicService.class);
 	    startService(music);
+	    //finish();
 
 	    //mServ.onDestroy();
 
@@ -58,10 +59,11 @@ public class WelcomeActivity extends Activity {
 	            @Override
 	            public void onClick(View v) {
 	                // No account, load new account view
-	            	mServ.stopMusic();
+	            	mServ.onDestroy();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    RegisterActivity.class);
 	                startActivityForResult(intent, 0);
+	                finish();
 	            }
 	        });
 
@@ -71,10 +73,11 @@ public class WelcomeActivity extends Activity {
 	            public void onClick(View v) {
 	                // Existing Account, load login view
 	            	///STOP MUSIC when we click login
-	            	mServ.stopMusic();
+	            	mServ.onDestroy();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    LoginActivity.class);
 	                startActivityForResult(intent, 0);
+	                finish();
 	            }
 	        });
 
