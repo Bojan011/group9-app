@@ -3,10 +3,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
     android:background="@drawable/mainscreen">
-    <ListView android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:listSelector="@android:color/transparent" 
-        android:id="@+id/tasks_list_view">
-                
-    </ListView>
+        android:orientation="vertical"
+        android:padding="6dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/world_map_button"
+                style="@style/HomeButton"
+                android:layout_height="102dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/world_map"
+                android:onClick="onButtonClicker"
+                android:text="@string/world_map" />
+
+            <Button
+                android:id="@+id/game_stats_button"
+                style="@style/HomeButton"
+                android:layout_height="101dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/game_stats"
+                android:onClick="onButtonClicker"
+                android:text="@string/game_stats" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/view_players_button"
+                style="@style/HomeButton"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/view_players"
+                android:onClick="onButtonClicker"
+                android:text="@string/view_players" />
+
+            <Button
+                android:id="@+id/edit_profile_button"
+                style="@style/HomeButton"
+                android:layout_height="101dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/edit_profile"
+                android:onClick="onButtonClicker"
+                android:text="@string/edit_profile" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/view_gangs_button"
+                style="@style/HomeButton"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/view_gangs"
+                android:onClick="onButtonClicker"
+                android:text="@string/view_gangs" />
+
+            <Button
+                android:id="@+id/log_out_button"
+                style="@style/HomeButton"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/logout"
+                android:onClick="onButtonClicker"
+                android:text="@string/log_out" />
+        </LinearLayout>
+    </LinearLayout>
+         
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+

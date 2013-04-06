@@ -30,4 +30,14 @@
     <string name="title_activity_character_stats_initialize">CharacterStatsInitialize</string>
     <string name="title_activity_character_stats_add">CharacterStatsAdd</string>
 
+    <color name="text_color">#984949</color>
+
+    <string name="log_out">Log out</string>
+    <string name="world_map">World Map</string>
+    <string name="game_stats">View Stats</string>
+    <string name="view_players">View Players</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="view_gangs">View Gangs</string>
+    <string name="title_activity_view_players">ViewPlayers</string>
+
 </resources>

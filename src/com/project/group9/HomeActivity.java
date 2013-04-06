@@ -15,71 +15,119 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class HomeActivity extends Activity {
-
-	private static final String TASKS_URL = "http://cryptic-hollows-1268.herokuapp.com/api/v1/tasks.json";
-	private SharedPreferences mPreferences;
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.activity_home);
+    public void onCreate(Bundle savedInstanceState) { 
+        super.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_home); 
+  
+        /** 
+         * Creating all buttons instances 
+         * */
+        // World Map button 
+        Button button_world_map = (Button) findViewById(R.id.world_map_button); 
+  
+        // View Stats button 
+        Button button_view_stats = (Button) findViewById(R.id.game_stats_button); 
+  
+        // View Players button 
+        Button button_view_players = (Button) findViewById(R.id.view_players_button); 
+  
+        // Edit Profile button 
+        Button button_edit_profile = (Button) findViewById(R.id.edit_profile_button); 
+  
+        // View Gangs button 
+        Button button_view_gangs = (Button) findViewById(R.id.view_gangs_button); 
+  
+        // Logout button 
+        Button button_logout = (Button) findViewById(R.id.log_out_button); 
+  
+        /** 
+         * Handling all button click events 
+         * */
+  
+        // Listening to World Map button click 
+        button_world_map.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching World Map Screen 
+                //Intent i = new Intent(getApplicationContext(), World_map.class); 
+                //startActivity(i); 
+            } 
+        }); 
+  
+        // Listening View Stats button click 
+        button_view_stats.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching View Stats Screen 
+                //Intent i = new Intent(getApplicationContext(), ViewStats.class); 
+                //startActivity(i); 
+            } 
+        }); 
+  
+        // Listening to View Players button click 
+        button_view_players.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching View Players Screen 
+                Intent i = new Intent(getApplicationContext(), ViewPlayers.class); 
+                startActivity(i); 
+            } 
+        }); 
+  
+        // Listening to Edit Profile button click 
+        button_edit_profile.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching Profile Screen 
+                Intent i = new Intent(getApplicationContext(), Profile.class); 
+                startActivity(i); 
+            } 
+        }); 
+        
+     // Listening View Gangs button click 
+        button_view_gangs.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching SideMissions Screen 
+                Intent i = new Intent(getApplicationContext(), ViewGang.class); 
+                startActivity(i); 
+            } 
+        }); 
+        
+        // Listening to Logout button click 
+        button_logout.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching Login Activity Screen 
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class); 
+                startActivity(i); 
+            } 
+        }); 
+    } 
 
-	    mPreferences = getSharedPreferences("CurrentUser", MODE_PRIVATE);
-	}
 
 	@Override
 	public void onResume() {
 	    super.onResume();
-
-	    if (mPreferences.contains("AuthToken")) {
-	        loadTasksFromAPI(TASKS_URL);
-	    } else {
-	        Intent intent = new Intent(HomeActivity.this, WelcomeActivity.class);
-	        startActivityForResult(intent, 0);
-	    }
 	    
 	}
 
-	private void loadTasksFromAPI(String url) {
-	    GetTasksTask getTasksTask = new GetTasksTask(HomeActivity.this);
-	    getTasksTask.setMessageLoading("Loading tasks...");
-	    getTasksTask.execute(url + "?auth_token=" + mPreferences.getString("AuthToken", ""));
-	}
 
-	private class GetTasksTask extends UrlJsonAsyncTask {
-	    public GetTasksTask(Context context) {
-	        super(context);
-	    }
-
-	    @Override
-	        protected void onPostExecute(JSONObject json) {
-	            try {
-	                JSONArray jsonTasks = json.getJSONObject("data").getJSONArray("tasks");
-	                int length = jsonTasks.length();
-	                List<String> tasksTitles = new ArrayList<String>(length);
-
-	                for (int i = 0; i < length; i++) {
-	                    tasksTitles.add(jsonTasks.getJSONObject(i).getString("title"));
-	                }
-
-	                ListView tasksListView = (ListView) findViewById (R.id.tasks_list_view);
-	                if (tasksListView != null) {
-	                    tasksListView.setAdapter(new ArrayAdapter<String>(HomeActivity.this,
-	                      android.R.layout.simple_list_item_1, tasksTitles));
-	                }
-	            } catch (Exception e) {
-	            Toast.makeText(context, e.getMessage(),
-	                Toast.LENGTH_LONG).show();
-	        } finally {
-	            super.onPostExecute(json);
-	        }
-	    }
-	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    getMenuInflater().inflate(R.menu.home, menu);
@@ -91,7 +139,7 @@ public class HomeActivity extends Activity {
 	    // Handle item selection
 	    switch (item.getItemId()) {
 	        case R.id.menu_refresh:
-	            loadTasksFromAPI(TASKS_URL);
+	           
 	            return true;
 	        case R.id.action_back:
 	        	Intent intent = new Intent(HomeActivity.this, WelcomeActivity.class);
@@ -100,5 +148,4 @@ public class HomeActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-
 }
