@@ -51,8 +51,8 @@ public class CharacterBuild extends Activity {
 	                    .getContentResolver(), photoUri);
 	                
 					your_imgv.setImageBitmap(bitmap);
-					your_imgv.getLayoutParams().height = 200;
-					your_imgv.getLayoutParams().width = 200;
+					your_imgv.getLayoutParams().height = 150;
+					your_imgv.getLayoutParams().width = 150;
 	                String profilePicPath = photoUri.toString();
 	            } catch (Exception e) {
 	                e.printStackTrace();
