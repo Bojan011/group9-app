@@ -81,6 +81,14 @@
             android:name="com.project.group9.ViewPlayers"
             android:label="@string/title_activity_view_players" >
         </activity>
+        <activity
+            android:name="com.project.group9.ViewStats"
+            android:label="@string/title_activity_view_stats" >
+        </activity>
+        <activity
+            android:name="com.project.group9.WorldMap"
+            android:label="@string/title_activity_world_map" >
+        </activity>
     </application>
 
 </manifest>

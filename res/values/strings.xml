@@ -40,5 +40,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="view_gangs">View Gangs</string>
     <string name="title_activity_view_players">ViewPlayers</string>
+    <string name="title_activity_view_stats">ViewStats</string>
+    <string name="title_activity_world_map">WorldMap</string>
 
 </resources>

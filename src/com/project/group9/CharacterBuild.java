@@ -27,7 +27,7 @@ public class CharacterBuild extends Activity {
 		        	}
 		        });
 		
-		findViewById(R.id.button1).setOnClickListener(
+		findViewById(R.id.proceedMenu).setOnClickListener(
 		        new View.OnClickListener() {
 		        	@Override
 		            public void onClick(View v) {

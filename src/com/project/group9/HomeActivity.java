@@ -62,8 +62,8 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching World Map Screen 
-                //Intent i = new Intent(getApplicationContext(), World_map.class); 
-                //startActivity(i); 
+                Intent i = new Intent(getApplicationContext(), WorldMap.class); 
+                startActivity(i); 
             } 
         }); 
   
@@ -73,8 +73,8 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching View Stats Screen 
-                //Intent i = new Intent(getApplicationContext(), ViewStats.class); 
-                //startActivity(i); 
+                Intent i = new Intent(getApplicationContext(), ViewStats.class); 
+                startActivity(i); 
             } 
         }); 
   

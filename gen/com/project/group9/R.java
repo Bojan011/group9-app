@@ -72,36 +72,41 @@ public final class R {
         public static final int world_map=0x7f02002d;
     }
     public static final class id {
-        public static final int action_back=0x7f0a001d;
-        public static final int action_settings=0x7f0a001b;
-        public static final int addPicture=0x7f0a0007;
+        public static final int action_back=0x7f0a0022;
+        public static final int action_settings=0x7f0a0020;
+        public static final int addPicture=0x7f0a0008;
         public static final int battle=0x7f0a0004;
-        public static final int battle_button=0x7f0a000d;
-        public static final int button1=0x7f0a0005;
+        public static final int battle_button=0x7f0a000e;
         public static final int char1=0x7f0a0001;
         public static final int char2=0x7f0a0000;
         public static final int editText1=0x7f0a0002;
-        public static final int editText2=0x7f0a0006;
-        public static final int edit_profile_button=0x7f0a000b;
-        public static final int game_stats_button=0x7f0a0009;
-        public static final int label=0x7f0a0018;
-        public static final int linearLayout1=0x7f0a0019;
-        public static final int log_out_button=0x7f0a000e;
-        public static final int loginButton=0x7f0a0011;
-        public static final int menu_refresh=0x7f0a001c;
-        public static final int player_icon=0x7f0a0016;
-        public static final int player_name=0x7f0a0017;
-        public static final int registerButton=0x7f0a0015;
-        public static final int registerDisclaimer=0x7f0a0014;
+        public static final int editText2=0x7f0a0007;
+        public static final int edit_profile_button=0x7f0a000c;
+        public static final int game_stats_button=0x7f0a000a;
+        public static final int gotoMain=0x7f0a0005;
+        public static final int label=0x7f0a001b;
+        public static final int linearLayout1=0x7f0a001d;
+        public static final int log_out_button=0x7f0a000f;
+        public static final int loginButton=0x7f0a0012;
+        public static final int menu_refresh=0x7f0a0021;
+        public static final int player_icon=0x7f0a0019;
+        public static final int player_name=0x7f0a001a;
+        public static final int proceedMenu=0x7f0a0006;
+        public static final int profileMain=0x7f0a0013;
+        public static final int questMain=0x7f0a0014;
+        public static final int registerButton=0x7f0a0018;
+        public static final int registerDisclaimer=0x7f0a0017;
+        public static final int statsMain=0x7f0a001c;
         public static final int textView1=0x7f0a0003;
-        public static final int userEmail=0x7f0a000f;
-        public static final int userName=0x7f0a0012;
-        public static final int userPassword=0x7f0a0010;
-        public static final int userPasswordConfirmation=0x7f0a0013;
-        public static final int view_gangs_button=0x7f0a000c;
-        public static final int view_players_button=0x7f0a000a;
-        public static final int welcomeTitle=0x7f0a001a;
-        public static final int world_map_button=0x7f0a0008;
+        public static final int userEmail=0x7f0a0010;
+        public static final int userName=0x7f0a0015;
+        public static final int userPassword=0x7f0a0011;
+        public static final int userPasswordConfirmation=0x7f0a0016;
+        public static final int view_gangs_button=0x7f0a000d;
+        public static final int view_players_button=0x7f0a000b;
+        public static final int welcomeTitle=0x7f0a001e;
+        public static final int worldMain=0x7f0a001f;
+        public static final int world_map_button=0x7f0a0009;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;
@@ -116,7 +121,9 @@ public final class R {
         public static final int activity_register=0x7f030009;
         public static final int activity_view_gang=0x7f03000a;
         public static final int activity_view_players=0x7f03000b;
-        public static final int activity_welcome=0x7f03000c;
+        public static final int activity_view_stats=0x7f03000c;
+        public static final int activity_welcome=0x7f03000d;
+        public static final int activity_world_map=0x7f03000e;
     }
     public static final class menu {
         public static final int battle=0x7f090000;
@@ -131,7 +138,9 @@ public final class R {
         public static final int register=0x7f090009;
         public static final int view_gang=0x7f09000a;
         public static final int view_players=0x7f09000b;
-        public static final int welcome=0x7f09000c;
+        public static final int view_stats=0x7f09000c;
+        public static final int welcome=0x7f09000d;
+        public static final int world_map=0x7f09000e;
     }
     public static final class raw {
         public static final int theme=0x7f040000;
@@ -163,7 +172,9 @@ public final class R {
         public static final int title_activity_register=0x7f060012;
         public static final int title_activity_view_gang=0x7f060018;
         public static final int title_activity_view_players=0x7f060023;
+        public static final int title_activity_view_stats=0x7f060024;
         public static final int title_activity_welcome=0x7f060010;
+        public static final int title_activity_world_map=0x7f060025;
         public static final int user_email=0x7f060006;
         public static final int user_name=0x7f060008;
         public static final int user_password=0x7f060007;
