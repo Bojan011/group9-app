@@ -32,10 +32,10 @@ public class HomeActivity extends Activity {
          * Creating all buttons instances 
          * */
         // World Map button 
-        Button button_world_map = (Button) findViewById(R.id.world_map_button); 
+        Button button_world_map = (Button) findViewById(R.id.map_button); 
   
         // View Stats button 
-        Button button_view_stats = (Button) findViewById(R.id.game_stats_button); 
+        Button button_view_stats = (Button) findViewById(R.id.stats_button); 
   
         // View Players button 
         Button button_view_players = (Button) findViewById(R.id.view_players_button); 

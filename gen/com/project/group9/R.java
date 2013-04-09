@@ -84,7 +84,6 @@ public final class R {
         public static final int editText1=0x7f0a0002;
         public static final int editText2=0x7f0a0007;
         public static final int edit_profile_button=0x7f0a0011;
-        public static final int game_stats_button=0x7f0a000f;
         public static final int gangMain=0x7f0a001d;
         public static final int gotoMain=0x7f0a0005;
         public static final int inbox_button=0x7f0a0014;
@@ -93,6 +92,7 @@ public final class R {
         public static final int listView=0x7f0a0016;
         public static final int log_out_button=0x7f0a0015;
         public static final int loginButton=0x7f0a000d;
+        public static final int map_button=0x7f0a000e;
         public static final int menu_refresh=0x7f0a0025;
         public static final int player_icon=0x7f0a001e;
         public static final int player_name=0x7f0a001f;
@@ -102,6 +102,7 @@ public final class R {
         public static final int registerButton=0x7f0a001c;
         public static final int registerDisclaimer=0x7f0a001b;
         public static final int statsMain=0x7f0a0009;
+        public static final int stats_button=0x7f0a000f;
         public static final int textView1=0x7f0a0003;
         public static final int userEmail=0x7f0a000b;
         public static final int userName=0x7f0a0019;
@@ -111,7 +112,6 @@ public final class R {
         public static final int view_players_button=0x7f0a0010;
         public static final int welcomeTitle=0x7f0a0022;
         public static final int worldMain=0x7f0a0023;
-        public static final int world_map_button=0x7f0a000e;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;

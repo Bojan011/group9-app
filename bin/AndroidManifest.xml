@@ -89,6 +89,14 @@
             android:name="com.project.group9.ComposeActivity"
             android:label="@string/title_activity_compose" >
         </activity>
+                <activity
+            android:name="com.project.group9.WorldMap"
+            android:label="@string/world_map" >
+        </activity>
+                <activity
+            android:name="com.project.group9.ViewStats"
+            android:label="@string/game_stats" >
+        </activity>
     </application>
 
 </manifest>
