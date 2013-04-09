@@ -65,7 +65,7 @@ public class BattleInfo extends Activity {
 	        DefaultHttpClient client = new DefaultHttpClient();
 	        //HttpClient c2 = new HttpClient();
 	        //HttpPost post = new HttpPost(urls[0]);
-	        HttpPost get = new HttpPost(urls[0]);
+	        HttpPost post = new HttpPost(urls[0]);
 	        
 	        //HttpPut to update
 	        JSONObject holder = new JSONObject();
@@ -82,16 +82,16 @@ public class BattleInfo extends Activity {
 		                userObj.put("auth_token", LoginActivity.TOKEN);
 		             // holder.put("auth_token", LoginActivity.TOKEN);
 		                StringEntity se = new StringEntity(userObj.toString());
-		                get.setEntity(se);
+		                post.setEntity(se);
 		                
 		             //End
 
 		                // setup the request headers
-		                get.setHeader("Accept", "application/json");
-		                get.setHeader("Content-Type", "application/json");
+		                post.setHeader("Accept", "application/json");
+		                post.setHeader("Content-Type", "application/json");
 		                
 	   
-		             response = client.execute(get, responseHandler);
+		             response = client.execute(post, responseHandler);
 		             Log.e("response......",""+response);
 		             jsonArray = new JSONArray(response);
 		             for (int i = 0 ; i < jsonArray.length(); i++ ) {
