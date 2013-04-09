@@ -93,7 +93,7 @@
             android:name="com.project.group9.WorldMap"
             android:label="@string/world_map" >
         </activity>
-                <activity
+        <activity
             android:name="com.project.group9.ViewStats"
             android:label="@string/game_stats" >
         </activity>

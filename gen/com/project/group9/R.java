@@ -62,19 +62,21 @@ public final class R {
         public static final int logout=0x7f020023;
         public static final int mail=0x7f020024;
         public static final int mainscreen=0x7f020025;
-        public static final int textboxbac=0x7f020026;
-        public static final int unknown=0x7f020027;
-        public static final int unknown2=0x7f020028;
-        public static final int view_gangs=0x7f020029;
-        public static final int view_players=0x7f02002a;
-        public static final int whiteblack=0x7f02002b;
-        public static final int whiteblacknor=0x7f02002c;
-        public static final int whiteblackpressed=0x7f02002d;
-        public static final int world_map=0x7f02002e;
+        public static final int map=0x7f020026;
+        public static final int map2=0x7f020027;
+        public static final int textboxbac=0x7f020028;
+        public static final int unknown=0x7f020029;
+        public static final int unknown2=0x7f02002a;
+        public static final int view_gangs=0x7f02002b;
+        public static final int view_players=0x7f02002c;
+        public static final int whiteblack=0x7f02002d;
+        public static final int whiteblacknor=0x7f02002e;
+        public static final int whiteblackpressed=0x7f02002f;
+        public static final int world_map=0x7f020030;
     }
     public static final class id {
-        public static final int action_back=0x7f0a0026;
-        public static final int action_settings=0x7f0a0024;
+        public static final int action_back=0x7f0a0027;
+        public static final int action_settings=0x7f0a0025;
         public static final int addPicture=0x7f0a0008;
         public static final int battle=0x7f0a0004;
         public static final int battle_button=0x7f0a0013;
@@ -93,7 +95,7 @@ public final class R {
         public static final int log_out_button=0x7f0a0015;
         public static final int loginButton=0x7f0a000d;
         public static final int map_button=0x7f0a000e;
-        public static final int menu_refresh=0x7f0a0025;
+        public static final int menu_refresh=0x7f0a0026;
         public static final int player_icon=0x7f0a001e;
         public static final int player_name=0x7f0a001f;
         public static final int proceedMenu=0x7f0a000a;
@@ -104,6 +106,7 @@ public final class R {
         public static final int statsMain=0x7f0a0009;
         public static final int stats_button=0x7f0a000f;
         public static final int textView1=0x7f0a0003;
+        public static final int textView2=0x7f0a0023;
         public static final int userEmail=0x7f0a000b;
         public static final int userName=0x7f0a0019;
         public static final int userPassword=0x7f0a000c;
@@ -111,7 +114,7 @@ public final class R {
         public static final int view_gangs_button=0x7f0a0012;
         public static final int view_players_button=0x7f0a0010;
         public static final int welcomeTitle=0x7f0a0022;
-        public static final int worldMain=0x7f0a0023;
+        public static final int worldMain=0x7f0a0024;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;
