@@ -132,6 +132,9 @@ public class HomeActivity extends Activity {
             	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             	startActivity(intent);
             	finish();
+            	//exit code
+            	System.exit(0);
+            	
             } 
         }); 
     } 

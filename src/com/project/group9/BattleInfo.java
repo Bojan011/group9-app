@@ -6,9 +6,11 @@ import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -62,19 +64,40 @@ public class BattleInfo extends Activity {
 	        DefaultHttpClient client = new DefaultHttpClient();
 	        //HttpPost post = new HttpPost(urls[0]);
 	        HttpGet get = new HttpGet(urls[0]);
-
+	        
+	        //HttpPut to update
 	        JSONObject holder = new JSONObject();
 	        JSONObject userObj = new JSONObject();
 	        String response = null;
+	        JSONArray jsonArray = new JSONArray();
 	        JSONObject json = new JSONObject();
+	        int attack;
+	        //String urlnew = "http://cryptic-hollows-1268.herokuapp.com/admin/users.json";
 	        try {
 	            try {
-	            	ResponseHandler<String> responseHandler = new BasicResponseHandler();
-	            	client.execute(get, responseHandler);
-	            	json = new JSONObject(response);
-	            	//run for loop, concatinate string.
-	            	Toast.makeText(context, json.toString(), Toast.LENGTH_LONG).show();
-	            	System.out.println(json.toString());
+	            	 ResponseHandler<String> responseHandler = new BasicResponseHandler();
+		             response = client.execute(get, responseHandler);
+		             jsonArray = new JSONArray(response);
+		             for (int i = 0 ; i < jsonArray.length(); i++ ) {
+		            	  json = jsonArray.getJSONObject(i);
+		            	  attack = json.getInt("attack");
+		            	  attack = attack + 1;
+		            	  HttpPut put = new HttpPut("http://cryptic-hollows-1268.herokuapp.com/admin/users/"+json.getString("id")
+		            			  +".json");
+		            	  //update database.
+		            	  userObj.put("attack", attack);
+		            	  json.put("user", userObj);
+		            	  StringEntity se = new StringEntity(json.toString());
+			              put.setEntity(se);
+
+			                // setup the request headers
+			              put.setHeader("Accept", "application/json");
+			              put.setHeader("Content-Type", "application/json");
+
+			              responseHandler = new BasicResponseHandler();
+			              response = client.execute(put, responseHandler);
+			              json = new JSONObject(response);
+		             }
 	            } catch (HttpResponseException e) {
 	                e.printStackTrace();
 	                Log.e("ClientProtocol", "" + e);
