@@ -78,7 +78,6 @@ public class BattleInfo extends Activity {
 	        try {
 	            try {
 	            	 ResponseHandler<String> responseHandler = new BasicResponseHandler();
-	            	 //Added by Cipher-tech
 		                userObj.put("auth_token", LoginActivity.TOKEN);
 		             // holder.put("auth_token", LoginActivity.TOKEN);
 		                StringEntity se = new StringEntity(userObj.toString());
@@ -94,6 +93,7 @@ public class BattleInfo extends Activity {
 		             response = client.execute(post, responseHandler);
 		             Log.e("response......",""+response);
 		             jsonArray = new JSONArray(response);
+		             Log.d("json........", jsonArray.toString());
 		             for (int i = 0 ; i < jsonArray.length(); i++ ) {
 		            	  json = jsonArray.getJSONObject(i);
 		            	  attack = json.getInt("attack");

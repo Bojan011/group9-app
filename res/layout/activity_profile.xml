@@ -112,14 +112,15 @@
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="65dp"
-                        android:layout_weight="0.46"
+                        android:layout_weight="0.04"
                         android:text="9"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ffffff"
                         android:textSize="24sp"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
             </LinearLayout>
