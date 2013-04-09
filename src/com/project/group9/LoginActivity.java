@@ -29,6 +29,7 @@ public class LoginActivity extends Activity {
 	private SharedPreferences mPreferences;
 	private String mUserEmail;
 	private String mUserPassword;
+	public static String TOKEN;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -125,6 +126,7 @@ public class LoginActivity extends Activity {
 	                // save the returned auth_token into
 	                // the SharedPreferences
 	                editor.putString("AuthToken", json.getJSONObject("data").getString("auth_token"));
+	                TOKEN = json.getJSONObject("data").getString("auth_token");
 	                editor.commit();
 	                System.out.print(mPreferences.edit());
 

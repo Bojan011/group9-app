@@ -2,6 +2,7 @@ package com.project.group9;
 
 import java.io.IOException;
 
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
@@ -62,8 +63,9 @@ public class BattleInfo extends Activity {
 		@Override
 	    protected JSONObject doInBackground(String... urls) {
 	        DefaultHttpClient client = new DefaultHttpClient();
+	        //HttpClient c2 = new HttpClient();
 	        //HttpPost post = new HttpPost(urls[0]);
-	        HttpGet get = new HttpGet(urls[0]);
+	        HttpPost get = new HttpPost(urls[0]);
 	        
 	        //HttpPut to update
 	        JSONObject holder = new JSONObject();
@@ -76,7 +78,21 @@ public class BattleInfo extends Activity {
 	        try {
 	            try {
 	            	 ResponseHandler<String> responseHandler = new BasicResponseHandler();
+	            	 //Added by Cipher-tech
+		                userObj.put("auth_token", LoginActivity.TOKEN);
+		             // holder.put("auth_token", LoginActivity.TOKEN);
+		                StringEntity se = new StringEntity(userObj.toString());
+		                get.setEntity(se);
+		                
+		             //End
+
+		                // setup the request headers
+		                get.setHeader("Accept", "application/json");
+		                get.setHeader("Content-Type", "application/json");
+		                
+	   
 		             response = client.execute(get, responseHandler);
+		             Log.e("response......",""+response);
 		             jsonArray = new JSONArray(response);
 		             for (int i = 0 ; i < jsonArray.length(); i++ ) {
 		            	  json = jsonArray.getJSONObject(i);
@@ -87,8 +103,8 @@ public class BattleInfo extends Activity {
 		            	  //update database.
 		            	  userObj.put("attack", attack);
 		            	  json.put("user", userObj);
-		            	  StringEntity se = new StringEntity(json.toString());
-			              put.setEntity(se);
+		            	  StringEntity se1 = new StringEntity(json.toString());
+			              put.setEntity(se1);
 
 			                // setup the request headers
 			              put.setHeader("Accept", "application/json");
