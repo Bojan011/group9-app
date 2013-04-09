@@ -13,7 +13,7 @@ public class ViewGang extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_gang);
-        Button contMain = (Button) findViewById(R.id.gotoMain);
+		Button contMain = (Button) findViewById(R.id.gangMain);
 		contMain.setOnClickListener(new View.OnClickListener() { 
   
             @Override

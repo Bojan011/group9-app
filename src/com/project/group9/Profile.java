@@ -13,16 +13,16 @@ public class Profile extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
-		   Button contMain = (Button) findViewById(R.id.profileMain);
-			contMain.setOnClickListener(new View.OnClickListener() { 
-	  
-	            @Override
-	            public void onClick(View view) { 
-	                // Launching World Map Screen 
-	                Intent i = new Intent(getApplicationContext(), HomeActivity.class); 
-	                startActivity(i); 
-	            } 
-	        }); 
+		Button contMain = (Button) findViewById(R.id.profileHome);
+		contMain.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching World Map Screen 
+                Intent i = new Intent(getApplicationContext(), HomeActivity.class); 
+                startActivity(i); 
+            } 
+        }); 
 	}
 
 	@Override

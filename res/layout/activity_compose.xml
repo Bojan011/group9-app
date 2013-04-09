@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/battlebackground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"  
+        android:gravity="right"      
+        android:padding="15dp" >
+
+        <EditText
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:background="@drawable/edittext_bg"
+            android:hint="To"
+            android:textColorHint="@android:color/white"
+            android:inputType="textEmailAddress" >
+			<requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/userPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@android:color/white"
+            android:hint="@string/compose_message"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/whiteblack"
+            android:text="@string/send"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

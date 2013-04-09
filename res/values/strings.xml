@@ -40,7 +40,11 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="view_gangs">View Gangs</string>
     <string name="title_activity_view_players">ViewPlayers</string>
-    <string name="title_activity_view_stats">ViewStats</string>
-    <string name="title_activity_world_map">WorldMap</string>
-
+    <string name="title_activity_inbox">InboxActivity</string>
+    <string name="inbox">Inbox</string>
+    <string name="compose">Compose</string>
+    <string name="title_activity_compose">ComposeActivity</string>
+    <string name="email">To</string>
+	<string name="compose_message">Compose message</string>
+	<string name="send">Send</string>
 </resources>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/charbuild"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:textColor="@android:color/white" >
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.42"
+		android:textColor="#fff"
+        android:textStyle="bold" >
+    </ListView>
+
+    <Button
+        android:id="@+id/compose_button"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_weight="0.02"
+        android:background="@drawable/whiteblack"
+        android:onClick="compose"
+        android:text="@string/compose"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+      
+</LinearLayout>

@@ -49,6 +49,9 @@ public class HomeActivity extends Activity {
         // Battle button
         Button button_battle = (Button) findViewById(R.id.battle_button);
         
+        // Inbox button 
+        Button button_inbox = (Button) findViewById(R.id.inbox_button); 
+  
         // Logout button 
         Button button_logout = (Button) findViewById(R.id.log_out_button); 
   
@@ -121,6 +124,17 @@ public class HomeActivity extends Activity {
             } 
         }); 
         
+     // Listening to Inbox button click 
+        button_inbox.setOnClickListener(new View.OnClickListener() { 
+  
+            @Override
+            public void onClick(View view) { 
+                // Launching Inbox Activity Screen 
+            	Intent i = new Intent(getApplicationContext(), InboxActivity.class); 
+                startActivity(i); 
+            } 
+          }); 
+            
         // Listening to Logout button click 
         button_logout.setOnClickListener(new View.OnClickListener() { 
   
@@ -132,9 +146,6 @@ public class HomeActivity extends Activity {
             	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             	startActivity(intent);
             	finish();
-            	//exit code
-            	System.exit(0);
-            	
             } 
         }); 
     } 

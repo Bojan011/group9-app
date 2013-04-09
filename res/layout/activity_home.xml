@@ -85,28 +85,32 @@
                 android:text="@string/title_activity_battle" />
             
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-             <Button
-                 android:id="@+id/log_out_button"
-                 style="@style/HomeButton"
-                 android:layout_height="100dp"
-                 android:background="@android:color/transparent"
-                 android:drawableTop="@drawable/logout"
-                 android:onClick="onButtonClicker"
-                 android:text="@string/log_out" />
-            
-             <Button
+            <Button
+                android:id="@+id/inbox_button"
                 style="@style/HomeButton"
                 android:layout_height="100dp"
-                android:background="@android:color/transparent"/>
-                                       
-		</LinearLayout>
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/mail"
+                android:onClick="onButtonClicker"
+                android:text="@string/inbox" />
+            
+            <Button
+                android:id="@+id/log_out_button"
+                style="@style/HomeButton"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/logout"
+                android:onClick="onButtonClicker"
+                android:text="@string/log_out" />
+        </LinearLayout>
+
     </LinearLayout>
          
 </LinearLayout>

@@ -7,13 +7,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class Quest extends Activity {
+public class ComposeActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_quest);
-		Button contMain = (Button) findViewById(R.id.questMain);
+		setContentView(R.layout.activity_compose);
+		Button contMain = (Button) findViewById(R.id.loginButton);
 		contMain.setOnClickListener(new View.OnClickListener() { 
   
             @Override
@@ -28,7 +28,7 @@ public class Quest extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.quest, menu);
+		getMenuInflater().inflate(R.menu.compose, menu);
 		return true;
 	}
 

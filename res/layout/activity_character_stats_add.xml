@@ -9,5 +9,16 @@
     tools:context=".CharacterStatsAdd"
     android:background="@drawable/characterstats" >
 
+    <Button
+        android:id="@+id/statsMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:text="Main Menu" 
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:background="@drawable/whiteblack"/>
 
 </RelativeLayout>

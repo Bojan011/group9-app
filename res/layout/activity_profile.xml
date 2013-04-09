@@ -10,15 +10,15 @@
     tools:context=".Profile" >
 
     <Button
-        android:id="@+id/profileMain"
+        android:id="@+id/profileHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="39dp"
-        android:background="@drawable/whiteblack"
-        android:text="Main Menu"
+        android:layout_marginBottom="37dp"
+        android:text="Main Menu" 
         android:textColor="#fff"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:background="@drawable/whiteblack"/>
 
 </RelativeLayout>

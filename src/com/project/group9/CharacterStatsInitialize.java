@@ -16,8 +16,8 @@ public class CharacterStatsInitialize extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_character_stats_initialize);
-		Button mainMenu = (Button) findViewById(R.id.proceedMenu);
-		mainMenu.setOnClickListener(new View.OnClickListener() { 
+		Button contMain = (Button) findViewById(R.id.proceedMenu);
+		contMain.setOnClickListener(new View.OnClickListener() { 
   
             @Override
             public void onClick(View view) { 

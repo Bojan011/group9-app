@@ -14,8 +14,9 @@ public class Battle extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_battle);
-		Button battleInfo = (Button) findViewById(R.id.battle);
-		battleInfo.setOnClickListener(new View.OnClickListener() { 
+		//TextView image = (TextView) this.findViewById(R.id.char1);
+		Button contMain = (Button) findViewById(R.id.battle);
+		contMain.setOnClickListener(new View.OnClickListener() { 
   
             @Override
             public void onClick(View view) { 
@@ -24,7 +25,6 @@ public class Battle extends Activity {
                 startActivity(i); 
             } 
         }); 
-		//TextView image = (TextView) this.findViewById(R.id.char1);	
 	} 
 
 	@Override

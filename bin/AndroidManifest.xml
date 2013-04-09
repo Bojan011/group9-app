@@ -82,12 +82,12 @@
             android:label="@string/title_activity_view_players" >
         </activity>
         <activity
-            android:name="com.project.group9.ViewStats"
-            android:label="@string/title_activity_view_stats" >
+            android:name="com.project.group9.InboxActivity"
+            android:label="@string/title_activity_inbox" >
         </activity>
         <activity
-            android:name="com.project.group9.WorldMap"
-            android:label="@string/title_activity_world_map" >
+            android:name="com.project.group9.ComposeActivity"
+            android:label="@string/title_activity_compose" >
         </activity>
     </application>
 
