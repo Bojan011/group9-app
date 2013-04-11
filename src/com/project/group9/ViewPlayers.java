@@ -58,12 +58,12 @@ public class ViewPlayers extends ListActivity {
 	}
 
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	//@Override
+	//public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.view_players, menu);
-		return true;
-	}
+	//	getMenuInflater().inflate(R.menu.view_players, menu);
+	//	return true;
+	//}
 	
 	
 	private class PlayerTask extends UrlJsonAsyncTask {
@@ -146,6 +146,12 @@ public class ViewPlayers extends ListActivity {
 	}
 	
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    getMenuInflater().inflate(R.menu.profile, menu);
+	    return true;
+	}
+	
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
 	    switch (item.getItemId()) {
@@ -157,6 +163,11 @@ public class ViewPlayers extends ListActivity {
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
+	}
+	
+	@Override
+	public void onBackPressed() {
+		 Toast.makeText(getBaseContext(),"Please use Back from Menu" , Toast.LENGTH_LONG).show();
 	}
 }
 
