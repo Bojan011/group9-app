@@ -22,12 +22,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class HomeActivity extends Activity {
-	
+	private SharedPreferences mPreferences;
 	@Override
     public void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 
         setContentView(R.layout.activity_home); 
-  
+	    mPreferences = getSharedPreferences("CurrentUser", MODE_PRIVATE);
         /** 
          * Creating all buttons instances 
          * */
@@ -141,9 +141,12 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching Login Activity Screen 
-            	Intent intent = new Intent(Intent.ACTION_MAIN);
-            	intent.addCategory(Intent.CATEGORY_HOME);
-            	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                SharedPreferences.Editor editor = mPreferences.edit();
+                // save the returned auth_token into
+                // the SharedPreferences
+                editor.putString("AuthToken","");
+                editor.commit();
+            	Intent intent = new Intent(HomeActivity.this,WelcomeActivity.class);
             	startActivity(intent);
             	finish();
             } 

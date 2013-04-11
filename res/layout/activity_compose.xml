@@ -19,7 +19,7 @@
             android:textColor="@android:color/white"
             android:ems="10"
             android:background="@drawable/edittext_bg"
-            android:hint="To"
+            android:hint="To"           
             android:textColorHint="@android:color/white"
             android:inputType="textEmailAddress" >
 			<requestFocus />
@@ -45,6 +45,7 @@
             android:background="@drawable/whiteblack"
             android:text="@string/send"
             android:textColor="#fff"
+            android:onClick="sendmail"
             android:textStyle="bold" />
 
     </LinearLayout>
