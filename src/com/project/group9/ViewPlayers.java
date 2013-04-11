@@ -3,9 +3,11 @@ package com.project.group9;
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 /*import android.content.Intent;
 import android.content.SharedPreferences;*/
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -143,5 +145,18 @@ public class ViewPlayers extends ListActivity {
 	    }
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.menu_refresh:
+	            return true;
+	        case R.id.action_back:
+	        	Intent intent = new Intent(ViewPlayers.this, HomeActivity.class);
+	        	startActivityForResult(intent, 0);
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
 }
 
