@@ -7,11 +7,13 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.view.Menu;
 import android.view.View;
 
 public class WelcomeActivity extends Activity {
-
+	
+	private SharedPreferences mPreferences;
     private boolean mIsBound = false;
     private MusicService mServ;
     private ServiceConnection Scon =new ServiceConnection(){
@@ -44,6 +46,12 @@ public class WelcomeActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_welcome);
+	    mPreferences = getSharedPreferences("CurrentUser", MODE_PRIVATE);
+	    if(mPreferences.getString("AuthToken", "").length()>2)
+	    {
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(intent);
+	    }
 	    this.doBindService();
 	    mServ = new MusicService();
 
