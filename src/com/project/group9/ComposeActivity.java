@@ -56,7 +56,7 @@ public class ComposeActivity extends Activity {
 	@Override
 	protected Object doInBackground(Object... params) {
         try {   
-            GMailSender sender = new GMailSender("yourmailid@gmail.com", "password");
+            GMailSender sender = new GMailSender("bdjordje@ryerson.ca", "Srbg011");
             sender.sendMail("This is Subject",   
                     "This is Body",   
                     "sender@gmail.com",   
