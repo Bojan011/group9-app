@@ -23,6 +23,7 @@
         android:layout_marginBottom="31dp"
         android:background="@drawable/whiteblack"
         android:text="Main Menu"
+        android:padding="5dp"
         android:textColor="#fff"
         android:textStyle="bold" />
 

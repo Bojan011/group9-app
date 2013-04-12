@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 /*import android.content.Intent;
 import android.content.SharedPreferences;*/
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -164,10 +165,14 @@ public class ViewPlayers extends ListActivity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	
-	@Override
-	public void onBackPressed() {
-		 Toast.makeText(getBaseContext(),"Please use Back from Menu" , Toast.LENGTH_LONG).show();
-	}
+	   @Override
+	    public boolean onKeyDown(int keyCode, KeyEvent event) {
+	        if (keyCode == KeyEvent.KEYCODE_BACK) {
+               Intent i = new Intent(ViewPlayers.this, HomeActivity.class); 
+               startActivity(i); 
+	            return true;
+	        }
+	        return super.onKeyDown(keyCode, event);
+	    }
 }
 
