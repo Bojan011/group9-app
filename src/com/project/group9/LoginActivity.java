@@ -27,7 +27,7 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
 	private final static String LOGIN_API_ENDPOINT_URL = "http://cryptic-hollows-1268.herokuapp.com/api/v1/sessions.json";
 	private SharedPreferences mPreferences;
-	private String mUserEmail;
+	private static String mUserEmail;
 	private String mUserPassword;
 	public static String TOKEN;
 	
@@ -144,6 +144,10 @@ public class LoginActivity extends Activity {
 	            super.onPostExecute(json);
 	        }
 	    }
+	}
+
+	public static String getPlayer() {
+		return mUserEmail;
 	}
 
 }

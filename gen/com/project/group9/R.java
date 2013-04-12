@@ -75,8 +75,8 @@ public final class R {
         public static final int world_map=0x7f020030;
     }
     public static final class id {
-        public static final int action_back=0x7f0a003b;
-        public static final int action_settings=0x7f0a0039;
+        public static final int action_back=0x7f0a003e;
+        public static final int action_settings=0x7f0a003c;
         public static final int addPicture=0x7f0a0008;
         public static final int aimTextView=0x7f0a0013;
         public static final int armourTextView=0x7f0a000e;
@@ -100,12 +100,12 @@ public final class R {
         public static final int inbox_button=0x7f0a0022;
         public static final int label=0x7f0a0035;
         public static final int levelTextView=0x7f0a0011;
-        public static final int linearLayout1=0x7f0a0036;
+        public static final int linearLayout1=0x7f0a0039;
         public static final int listView=0x7f0a0024;
         public static final int log_out_button=0x7f0a0023;
         public static final int loginButton=0x7f0a001b;
         public static final int map_button=0x7f0a001c;
-        public static final int menu_refresh=0x7f0a003a;
+        public static final int menu_refresh=0x7f0a003d;
         public static final int middleLinearLayout=0x7f0a000b;
         public static final int player_icon=0x7f0a0033;
         public static final int player_name=0x7f0a0034;
@@ -117,6 +117,9 @@ public final class R {
         public static final int registerButton=0x7f0a0031;
         public static final int registerDisclaimer=0x7f0a0030;
         public static final int scrollView1=0x7f0a0028;
+        public static final int stat=0x7f0a0036;
+        public static final int statValue=0x7f0a0037;
+        public static final int statnum=0x7f0a0038;
         public static final int statsMain=0x7f0a0012;
         public static final int stats_button=0x7f0a001d;
         public static final int strengthTextView=0x7f0a000d;
@@ -133,8 +136,8 @@ public final class R {
         public static final int userPasswordConfirmation=0x7f0a002f;
         public static final int view_gangs_button=0x7f0a0020;
         public static final int view_players_button=0x7f0a001e;
-        public static final int welcomeTitle=0x7f0a0037;
-        public static final int worldMain=0x7f0a0038;
+        public static final int welcomeTitle=0x7f0a003a;
+        public static final int worldMain=0x7f0a003b;
     }
     public static final class layout {
         public static final int activity_battle=0x7f030000;
