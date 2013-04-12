@@ -56,7 +56,7 @@ public class ComposeActivity extends Activity {
 	@Override
 	protected Object doInBackground(Object... params) {
         try {   
-            GMailSender sender = new GMailSender("bdjordje@ryerson.ca", "Srbg011");
+            GMailSender sender = new GMailSender("bdjordje@ryerson.ca", "123456789");
             sender.sendMail("This is Subject",   
                     "This is Body",   
                     "sender@gmail.com",   
@@ -72,8 +72,9 @@ public class ComposeActivity extends Activity {
 		super.onPostExecute(result);
 		pDialog.dismiss();
 
-			Toast.makeText(getApplicationContext(), "Message send", 4000).show();
-
+		Toast.makeText(getApplicationContext(), "Message sent", 4000).show();
+		Intent i = new Intent(getApplicationContext(), HomeActivity.class); 
+        startActivity(i);
 		
 	}
  }
