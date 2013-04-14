@@ -33,7 +33,20 @@ public class BattleInfo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_battle_info);
-		BattleTask battleTask = new BattleTask(BattleInfo.this);
+		
+		
+		Bundle data = getIntent().getExtras();
+		
+		String user_id ="2";
+		//get only if we have userid or 
+		//set leave the default id
+
+		if (data != null && data.size() > 0){
+			user_id = String.valueOf(data.get("id"));
+		}
+		
+		BattleTask battleTask = new BattleTask(BattleInfo.this,user_id);
+		
 		battleTask.setMessageLoading("Battle in progress...");
         battleTask.execute(USER_ENDPOINT_URL);
         Button contMain = (Button) findViewById(R.id.gotoMain);
@@ -56,8 +69,13 @@ public class BattleInfo extends Activity {
 	}
 	
 	private class BattleTask extends UrlJsonAsyncTask {
-		public BattleTask(Context context) {
+		
+		private String url = "http://192.168.2.4:3000/battle/1/";
+		
+		public BattleTask(Context context,String oponentId) {
 	        super(context);
+	        //this.url += self.id + "/";
+	        this.url += oponentId;
 	    }
 		
 		@Override
@@ -66,6 +84,8 @@ public class BattleInfo extends Activity {
 	        //HttpClient c2 = new HttpClient();
 	        //HttpPost post = new HttpPost(urls[0]);
 	        HttpPost post = new HttpPost(urls[0]);
+	        
+	        Log.i("THis" , urls[0]);
 	        
 	        //HttpPut to update
 	        JSONObject holder = new JSONObject();
@@ -133,6 +153,9 @@ public class BattleInfo extends Activity {
 		@Override
 	    protected void onPostExecute(JSONObject json) {
 			try {
+				
+				Log.i("REply Json" , json.toString());
+				Toast.makeText(getApplicationContext(), String.valueOf(json.get("id")), Toast.LENGTH_LONG);
 				
 			} catch (Exception e) {
 				Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();

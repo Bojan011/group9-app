@@ -1,12 +1,12 @@
 package com.project.group9;
 
 import android.os.Bundle;
+import android.app.LauncherActivity.ListItem;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 /*import android.content.Intent;
 import android.content.SharedPreferences;*/
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,12 +37,13 @@ import java.io.InputStreamReader;
 
 public class ViewPlayers extends ListActivity {
 	
+	PlayerTask playerTask;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 	
-		PlayerTask playerTask = new PlayerTask(ViewPlayers.this);
+		playerTask = new PlayerTask(ViewPlayers.this);
         playerTask.setMessageLoading("Fetching Players...");
         playerTask.execute();
 		
@@ -51,10 +52,20 @@ public class ViewPlayers extends ListActivity {
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-
-	//get selected items
-	String selectedValue = (String) getListAdapter().getItem(position);
-	Toast.makeText(this, selectedValue, Toast.LENGTH_SHORT).show();
+	
+		//get selected items
+		String selectedValue = (String) getListAdapter().getItem(position);
+		//Toast.makeText(this, selectedValue, Toast.LENGTH_SHORT).show();
+		
+		//dev
+		Intent intent = new Intent(getApplicationContext(), OpponentCharacterStats.class);
+	
+	    intent.putExtra("id",  playerTask.playersID[position]);
+	  
+	    
+		startActivity(intent);
+		//dev
+	
 
 	}
 
@@ -72,6 +83,9 @@ public class ViewPlayers extends ListActivity {
 	        super(context);
 	    }
 
+	    //store the details of players here
+	    public int[] playersID = null;
+	    
 	    @Override
 	    protected JSONObject doInBackground(String... urls) {
 	    	StringBuilder builder = new StringBuilder();
@@ -126,11 +140,17 @@ public class ViewPlayers extends ListActivity {
 	        	Log.i(ViewPlayers.class.getName(), json.toString());
 	        	 JSONArray jsonArray = json.getJSONArray("a");
 	        	 String[] players =new String[jsonArray.length()]; 
+	        	 this.playersID = new int[jsonArray.length()];
+	        	 
 			      Log.i(ViewPlayers.class.getName(),
 			          "Number of entries " + jsonArray.length());
 			      for (int i = 0; i < jsonArray.length(); i++) {
 			        JSONObject jsonObject = jsonArray.getJSONObject(i);
 			        players[i]= jsonObject.getString("name");
+			        
+			        //store players id
+			        this.playersID[i] = jsonObject.getInt("id");
+			        
 			        Log.i(ViewPlayers.class.getName(), jsonObject.getString("name"));
 			      }
 			      
@@ -165,14 +185,10 @@ public class ViewPlayers extends ListActivity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	   @Override
-	    public boolean onKeyDown(int keyCode, KeyEvent event) {
-	        if (keyCode == KeyEvent.KEYCODE_BACK) {
-               Intent i = new Intent(ViewPlayers.this, HomeActivity.class); 
-               startActivity(i); 
-	            return true;
-	        }
-	        return super.onKeyDown(keyCode, event);
-	    }
+	
+	@Override
+	public void onBackPressed() {
+		 Toast.makeText(getBaseContext(),"Please use Back from Menu" , Toast.LENGTH_LONG).show();
+	}
 }
 

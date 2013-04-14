@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CyberPunk</string>
+    <string name="app_name">CyberPlink</string>
     <string name="gender">Gender (M or F)</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
@@ -16,7 +16,7 @@
     <string name="register_disclaimer">By clicking on Register you are agreeing to terms of service</string>
     <string name="hello_world">Hello world!</string>
     <string name="char_build">Create Character</string>
-    <string name="battle">YOU HAVE A CHALLENGER,\nPREPARE FOR BATTLE!</string>
+    <string name="battle">In order to fight someone, you have\nto select View Players from the Main-\nMenu and then choose your opponent</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
@@ -43,8 +43,10 @@
     <string name="title_activity_inbox">InboxActivity</string>
     <string name="inbox">Inbox</string>
     <string name="compose">Compose</string>
-    <string name="title_activity_compose">ComposeActivity</string>
+    <string name="title_activity_compose">PrivateMessage</string>
     <string name="email">To</string>
 	<string name="compose_message">Compose message</string>
 	<string name="send">Send</string>
+	<string name="title_opp_stats">Statistics</string>
+	<string name="title_activity_battle_result">Battle Result</string>
 </resources>

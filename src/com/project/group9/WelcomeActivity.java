@@ -3,14 +3,11 @@ package com.project.group9;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 
@@ -73,8 +70,8 @@ public class WelcomeActivity extends Activity {
 	            	mServ.onDestroy();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    RegisterActivity.class);
-	                startActivity(intent);
-	        
+	                startActivityForResult(intent, 0);
+	                finish();
 	            }
 	        });
 
@@ -87,56 +84,22 @@ public class WelcomeActivity extends Activity {
 	            	mServ.onDestroy();
 	                Intent intent = new Intent(WelcomeActivity.this,
 	                    LoginActivity.class);
-	                startActivity(intent);
-	
+	                startActivityForResult(intent, 0);
+	                finish();
 	            }
 	        });
 
 	}
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-
-    		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(WelcomeActivity.this);
-     
-    			// set title
-    			alertDialogBuilder.setTitle("Exit");
-     
-    			// set dialog message
-    			alertDialogBuilder
-    				.setMessage("Do you want to exit ?")
-    				.setCancelable(false)
-    				.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, close
-    		                // The neutral button was clicked
-    		            	Intent i = new Intent();
-    		        		i.setAction(Intent.ACTION_MAIN);
-    		        		i.addCategory(Intent.CATEGORY_HOME);
-    		        		startActivity(i); 
-    		        		finish();  
-    					}
-    				  })
-    				.setNegativeButton("No",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, just close
-    						// the dialog box and do nothing
-    						dialog.cancel();
-    					}
-    				});
-     				// create alert dialog
-    				AlertDialog alertDialog = alertDialogBuilder.create();
-     
-    				// show it
-    				alertDialog.show();
-
-            
-        
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+	@Override
+	public void onBackPressed() {
+	    Intent startMain = new Intent(Intent.ACTION_MAIN);
+	    startMain.addCategory(Intent.CATEGORY_HOME);
+	    startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    startActivity(startMain);
+	    //stopService(music);
+	    mServ.onDestroy();
+	    finish();
+	}
 
 }

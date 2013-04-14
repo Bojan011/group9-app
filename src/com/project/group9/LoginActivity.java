@@ -30,6 +30,7 @@ public class LoginActivity extends Activity {
 	private static String mUserEmail;
 	private String mUserPassword;
 	public static String TOKEN;
+	public static String USER_ID;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -128,6 +129,8 @@ public class LoginActivity extends Activity {
 	                editor.putString("AuthToken", json.getJSONObject("data").getString("auth_token"));
 	                TOKEN = json.getJSONObject("data").getString("auth_token");
 	                editor.commit();
+	                USER_ID = json.getJSONObject("data").getString("id");
+	                
 	                System.out.print(mPreferences.edit());
 
 	                // launch the HomeActivity and close this one

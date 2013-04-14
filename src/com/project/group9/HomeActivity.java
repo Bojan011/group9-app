@@ -10,12 +10,9 @@ import com.savagelook.android.UrlJsonAsyncTask;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -68,7 +65,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching World Map Screen 
-                Intent i = new Intent(HomeActivity.this, WorldMap.class); 
+                Intent i = new Intent(getApplicationContext(), WorldMap.class); 
                 startActivity(i); 
             } 
         }); 
@@ -79,7 +76,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching View Stats Screen 
-                Intent i = new Intent(HomeActivity.this, ViewStats.class); 
+                Intent i = new Intent(getApplicationContext(), ViewStats.class); 
                 startActivity(i); 
             } 
         }); 
@@ -90,7 +87,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching View Players Screen 
-                Intent i = new Intent(HomeActivity.this, ViewPlayers.class); 
+                Intent i = new Intent(getApplicationContext(), ViewPlayers.class); 
                 startActivity(i); 
             } 
         }); 
@@ -101,7 +98,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching Profile Screen 
-                Intent i = new Intent(HomeActivity.this, Profile.class); 
+                Intent i = new Intent(getApplicationContext(), Profile.class); 
                 startActivity(i); 
             } 
         }); 
@@ -112,7 +109,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching SideMissions Screen 
-                Intent i = new Intent(HomeActivity.this, ViewGang.class); 
+                Intent i = new Intent(getApplicationContext(), ViewGang.class); 
                 startActivity(i); 
             } 
         }); 
@@ -122,7 +119,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching battle Screen 
-                Intent i = new Intent(HomeActivity.this, Battle.class); 
+                Intent i = new Intent(getApplicationContext(), Battle.class); 
                 startActivity(i); 
             } 
         }); 
@@ -133,7 +130,7 @@ public class HomeActivity extends Activity {
             @Override
             public void onClick(View view) { 
                 // Launching Inbox Activity Screen 
-            	Intent i = new Intent(HomeActivity.this, InboxActivity.class); 
+            	Intent i = new Intent(getApplicationContext(), InboxActivity.class); 
                 startActivity(i); 
             } 
           }); 
@@ -184,48 +181,4 @@ public class HomeActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-
-    		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(HomeActivity.this);
-     
-    			// set title
-    			alertDialogBuilder.setTitle("Exit");
-     
-    			// set dialog message
-    			alertDialogBuilder
-    				.setMessage("Do you want to exit ?")
-    				.setCancelable(false)
-    				.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, close
-    		                // The neutral button was clicked
-    		            	Intent i = new Intent();
-    		        		i.setAction(Intent.ACTION_MAIN);
-    		        		i.addCategory(Intent.CATEGORY_HOME);
-    		        		startActivity(i); 
-    		        		finish();  
-    					}
-    				  })
-    				.setNegativeButton("No",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, just close
-    						// the dialog box and do nothing
-    						dialog.cancel();
-    					}
-    				});
-     				// create alert dialog
-    				AlertDialog alertDialog = alertDialogBuilder.create();
-     
-    				// show it
-    				alertDialog.show();
-
-            
-        
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 }

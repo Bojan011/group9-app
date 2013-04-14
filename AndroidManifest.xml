@@ -62,11 +62,12 @@
         <activity
             android:name="com.project.group9.BattleInfo"
             android:label="@string/title_activity_battle_info" >
-        </activity>
+        </activity><activity android:name="com.project.group9.BattleResult" android:label="@string/title_activity_battle_result"></activity>
         <activity
             android:name="com.project.group9.CharacterStatsInitialize"
             android:label="@string/title_activity_character_stats_initialize" >
         </activity>
+
         <activity
             android:name="com.project.group9.CharacterStatsAdd"
             android:label="@string/title_activity_character_stats_add" >
@@ -80,8 +81,7 @@
         <activity
             android:name="com.project.group9.ViewPlayers"
             android:label="@string/title_activity_view_players" >
-        </activity>
-        <activity
+        </activity><activity
             android:name="com.project.group9.InboxActivity"
             android:label="@string/title_activity_inbox" >
         </activity>
@@ -97,6 +97,9 @@
             android:name="com.project.group9.ViewStats"
             android:label="@string/game_stats" >
         </activity>
+        <activity android:name="OpponentCharacterStats" android:label="@string/title_opp_stats"></activity>
+        
+        
     </application>
 
 </manifest>

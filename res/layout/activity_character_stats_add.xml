@@ -28,13 +28,11 @@
 
     <LinearLayout
         android:id="@+id/middleLinearLayout"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/topLinearLayout"
-        android:padding="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:background="#6000"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -48,7 +46,6 @@
                 android:text="Health (HP): "
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
-                android:layout_weight="1"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -74,7 +71,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
                 android:textSize="22sp"
-                android:layout_weight="1"
                 android:textStyle="bold" />
 
             <TextView
@@ -99,7 +95,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
                 android:textSize="22sp"
-                android:layout_weight="1"
                 android:textStyle="bold" />
 
             <TextView
@@ -120,7 +115,6 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Regen (RGN): "
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
@@ -149,7 +143,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
                 android:textSize="22sp"
-                android:layout_weight="1"
                 android:textStyle="bold" />
 
             <TextView
@@ -174,7 +167,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ffffff"
                 android:textSize="22sp"
-                android:layout_weight="1"
                 android:textStyle="bold" />
 
             <TextView
@@ -195,7 +187,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="29dp"
-        android:padding="5dp"
         android:background="@drawable/whiteblack"
         android:text="Main Menu"
         android:textColor="#fff"
